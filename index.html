@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Revolut France - L'application financière tout-en-un</title>
+    <meta name="description" content="Revolut France : l'application bancaire tout-en-un pour gérer votre argent, vos paiements, vos économies et vos récompenses." />
+    <link rel="icon" href="https://assets.revolut.com/favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #fff; color: #111; }
+        a { transition: color 0.3s; outline: none; }
+        a:focus { outline: 2px solid #2563eb; outline-offset: 2px; }
+        .btn-primary { background: #000; color: #fff; transition: background 0.3s; }
+        .btn-primary:hover, .btn-primary:focus { background: #333; }
+        .section-divider { border-top: 1px solid #e5e7eb; margin: 4rem 0; }
+        .cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.95); color: #fff; padding: 16px 8px; z-index: 1000; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; }
+        .cookie-banner p { margin: 0 10px 10px 10px; flex: 1 1 200px; }
+        .cookie-banner button { margin: 0 5px; padding: 6px 18px; border-radius: 4px; border: none; cursor: pointer; font-weight: 600; }
+        .accept-cookies { background: #22c55e; color: #fff; }
+        .reject-cookies { background: #ef4444; color: #fff; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" role="region" aria-label="Bannière cookies" id="cookieBanner">
+        <p>
+            Les cookies nous permettent d'améliorer votre expérience, de personnaliser les publicités et d'optimiser notre site web.
+            <a href="#" class="underline focus:underline" id="customizeCookies">En savoir plus et gérer</a>
+        </p>
+        <button id="acceptAllCookies" class="accept-cookies">Tout accepter</button>
+        <button id="rejectNonEssential" class="reject-cookies">Refuser les cookies non essentiels</button>
+    </div>
+    <script>
+        // Simple cookie banner logic
+        document.getElementById('acceptAllCookies').onclick = function() {
+            document.getElementById('cookieBanner').style.display = 'none';
+            // Ici, ajouter la logique de consentement si besoin
+        };
+        document.getElementById('rejectNonEssential').onclick = function() {
+            document.getElementById('cookieBanner').style.display = 'none';
+        };
+    </script>
+
+    <!-- Header -->
+    <header class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto" role="banner">
+        <div class="flex items-center space-x-4">
+            <a href="#" aria-label="Accueil Revolut">
+                <img src="https://assets.revolut.com/published-assets-v3/c0e4e657-4bf2-4dc8-80e6-0ca8329be697/6169b4c7-f2f6-4ea3-ad03-cd445c2d85c6.png" alt="Logo Revolut" class="h-10" loading="lazy" />
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold text-gray-900" aria-label="Navigation principale">
+                <a href="#" class="hover:underline focus:underline">Personnel</a>
+                <a href="#" class="hover:underline focus:underline">Business</a>
+                <a href="#" class="hover:underline focus:underline">Revolut &lt;18</a>
+                <a href="#" class="hover:underline focus:underline">Entreprise</a>
+            </nav>
+        </div>
+        <div class="space-x-4 text-sm font-semibold">
+            <a href="login.html" class="hover:underline focus:underline">Se connecter</a>
+            <a href="#" class="hover:underline focus:underline">S'inscrire</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-12" aria-labelledby="hero-title">
+        <div class="md:w-1/2">
+            <h1 id="hero-title" class="text-5xl font-extrabold leading-tight mb-6">Bien plus qu'une banque</h1>
+            <p class="text-lg mb-6">
+                Chez vous ou à l'étranger, laissez Revolut dépasser toutes vos attentes en matière de services bancaires. Inscrivez-vous gratuitement en un clic seulement.
+            </p>
+            <a href="https://get.revolut.com/E528/?af_channel=website_direct&af_dp=revolut%3A%2F%2Fapp" class="btn-primary inline-block px-6 py-3 rounded font-semibold shadow focus:ring-2 focus:ring-blue-500" rel="noopener" target="_blank">
+                <i class="fa-solid fa-download mr-2"></i>Télécharger l'application
+            </a>
+        </div>
+        <div class="md:w-1/2">
+            <img src="https://assets.revolut.com/published-assets-v3/c0e4e657-4bf2-4dc8-80e6-0ca8329be697/6169b4c7-f2f6-4ea3-ad03-cd445c2d85c6.png" alt="Aperçu application Revolut" class="w-full max-w-md mx-auto rounded-lg shadow" loading="lazy" />
+        </div>
+    </section>
+
+    <!-- Salary Section -->
+    <section class="max-w-7xl mx-auto px-6 py-12 bg-gray-50 rounded-lg shadow-md flex flex-col md:flex-row items-center gap-12" aria-labelledby="salary-title">
+        <div class="md:w-1/2">
+            <h2 id="salary-title" class="text-3xl font-bold mb-4">Réimaginez votre salaire</h2>
+            <p class="mb-6">
+                Dépensez intelligemment, envoyez de l'argent rapidement, répartissez votre salaire automatiquement et regardez vos économies augmenter avec un compte doté d'un IBAN français.
+            </p>
+            <a href="https://get.revolut.com/E528/?af_channel=website_direct&af_dp=revolut%3A%2F%2Fapp" class="btn-primary inline-block px-6 py-3 rounded font-semibold shadow focus:ring-2 focus:ring-blue-500" rel="noopener" target="_blank">
+                Domicilier mon salaire sur Revolut
+            </a>
+        </div>
+        <div class="md:w-1/2">
+            <img src="https://assets.revolut.com/published-assets-v3/6d867f98-f26d-422b-a43e-e29a016fab1e/0491bb7a-bf15-4c05-b3a3-d05169f5066e.png" alt="Illustration salaire Revolut" class="w-full max-w-md mx-auto rounded-lg shadow" loading="lazy" />
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="max-w-7xl mx-auto px-6 py-16 text-center" aria-labelledby="trust-title">
+        <h3 id="trust-title" class="text-2xl font-semibold mb-8">La banque que 5 millions de clients utilisent en France</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div>
+                <img src="https://assets.revolut.com/published-assets-v3/baf74063-c481-431d-85a0-9e5743572f28/91d20a70-1a2d-46e1-8f45-ebd7e83196a8.png" alt="App téléchargements" class="mx-auto mb-2" loading="lazy" />
+                <p class="text-sm">Application bancaire nº 1 en nombre de téléchargements</p>
+            </div>
+            <div>
+                <img src="https://assets.revolut.com/published-assets-v3/6ca566dc-8294-4e99-afbd-c51804cc5af4/2fb9c781-10a1-4bbf-bb42-7526bcc81286.png" alt="Note Trustpilot" class="mx-auto mb-2" loading="lazy" />
+                <p class="text-sm">4,5 sur 5 sur Trustpilot</p>
+            </div>
+            <div>
+                <img src="https://assets.revolut.com/published-assets-v3/72f7664c-5449-48c4-8025-c2e0f2869873/413344df-c819-4aed-a07f-40f660ef0449.png" alt="Prix innovation" class="mx-auto mb-2" loading="lazy" />
+                <p class="text-sm">Prix « Entreprise la plus innovante en finances personnelles 2024 »</p>
+            </div>
+            <div>
+                <img src="https://assets.revolut.com/published-assets-v3/99476115-af66-47b7-a995-5267a06b17f0/6f71aa64-252a-4d6a-8ed6-43729d5ba349.png" alt="Banque la moins chère pour les jeunes" class="mx-auto mb-2" loading="lazy" />
+                <p class="text-sm">Banque en ligne la moins chère pour les jeunes</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rewards Section -->
+    <section class="max-w-7xl mx-auto px-6 py-12 bg-gray-50 rounded-lg shadow-md text-center" aria-labelledby="rewards-title">
+        <h3 id="rewards-title" class="text-2xl font-semibold mb-4">Gagnez plus grâce à vos dépenses</h3>
+        <p class="mb-6 max-w-xl mx-auto">
+            Gagnez des points sur chaque achat avec l'une de nos cartes de débit. Vous pouvez ensuite les échanger contre des miles et bien plus encore. Les conditions générales s'appliquent.<br>
+            Certaines cartes sont uniquement disponibles sur les abonnements payants. Des frais peuvent s'appliquer.
+        </p>
+        <a href="https://get.revolut.com/E528/?af_channel=website_direct&af_dp=revolut%3A%2F%2Fapp" class="btn-primary inline-block px-6 py-3 rounded font-semibold shadow focus:ring-2 focus:ring-blue-500" rel="noopener" target="_blank">
+            Découvrir les récompenses
+        </a>
+    </section>
+
+    <footer class="max-w-7xl mx-auto px-6 py-8 text-center text-gray-500 text-xs mt-12">
+        &copy; 2025 Revolut. Tous droits réservés. | <a href="#" class="underline hover:text-gray-700">Mentions légales</a>
+    </footer>
+</body>
+</html>
